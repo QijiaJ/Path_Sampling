@@ -1,0 +1,230 @@
+{
+  "setup": {
+    "d": 2,
+    "T": 0.5,
+    "dt": 0.01,
+    "scale": 3.5,
+    "harmonic": 0.5,
+    "potential": "V(x) = 3.5*(x1^2-1)^2 + 0.5*x2^2",
+    "well_A": [
+      -1.0,
+      0.0
+    ],
+    "well_B": [
+      1.0,
+      0.0
+    ],
+    "device": "cpu"
+  },
+  "reference": {
+    "n_proposals": 50000,
+    "n_resampled": 500,
+    "ess": 244.0,
+    "sigma_ref": 0.15
+  },
+  "algorithm1": {
+    "n_annealing": 30,
+    "n_paths": 500,
+    "n_opt": 200,
+    "n_spde_refine": 0,
+    "sigma_obs": 0.15,
+    "time_s": 40176.9,
+    "memory_mb": 56.2,
+    "marginal_metrics": {
+      "t=0.05": {
+        "mmd2": 0.06359,
+        "sw2": 0.04164
+      },
+      "t=0.10": {
+        "mmd2": 0.11212,
+        "sw2": 0.10661
+      },
+      "t=0.15": {
+        "mmd2": 0.1655,
+        "sw2": 0.19484
+      },
+      "t=0.20": {
+        "mmd2": 0.20006,
+        "sw2": 0.26533
+      },
+      "t=0.25": {
+        "mmd2": 0.2031,
+        "sw2": 0.25866
+      },
+      "t=0.30": {
+        "mmd2": 0.18008,
+        "sw2": 0.22244
+      },
+      "t=0.35": {
+        "mmd2": 0.11059,
+        "sw2": 0.1462
+      },
+      "t=0.40": {
+        "mmd2": 0.04786,
+        "sw2": 0.06455
+      },
+      "t=0.45": {
+        "mmd2": 0.02133,
+        "sw2": 0.02559
+      }
+    },
+    "path_sw2": 0.11207,
+    "om_action": {
+      "sample_mean": 119.094,
+      "sample_std": 16.223,
+      "ref_mean": 105.608,
+      "ref_std": 13.995
+    },
+    "barrier_crossing_frac": 0.994,
+    "ref_crossing_frac": 1.0,
+    "transition_state": {
+      "sample_frac_near_barrier": 0.11,
+      "ref_frac_near_barrier": 0.306,
+      "sample_x1_mid_mean": 0.627,
+      "ref_x1_mid_mean": -0.004
+    },
+    "terminal": {
+      "sample_x1_mean": 0.979,
+      "sample_x2_mean": 0.056,
+      "ref_x1_mean": 0.967,
+      "ref_x2_mean": 0.015,
+      "mean_dist_to_B": 0.252
+    }
+  },
+  "algorithm1_spde": {
+    "n_annealing": 30,
+    "n_paths": 500,
+    "n_opt": 200,
+    "n_spde_refine": 8,
+    "sigma_obs": 0.15,
+    "time_s": 58251.6,
+    "memory_mb": 1.8,
+    "marginal_metrics": {
+      "t=0.05": {
+        "mmd2": 0.00594,
+        "sw2": 0.02344
+      },
+      "t=0.10": {
+        "mmd2": 0.02375,
+        "sw2": 0.02846
+      },
+      "t=0.15": {
+        "mmd2": 0.05378,
+        "sw2": 0.06726
+      },
+      "t=0.20": {
+        "mmd2": 0.09911,
+        "sw2": 0.13511
+      },
+      "t=0.25": {
+        "mmd2": 0.15095,
+        "sw2": 0.20139
+      },
+      "t=0.30": {
+        "mmd2": 0.16866,
+        "sw2": 0.21988
+      },
+      "t=0.35": {
+        "mmd2": 0.12477,
+        "sw2": 0.17426
+      },
+      "t=0.40": {
+        "mmd2": 0.05898,
+        "sw2": 0.09824
+      },
+      "t=0.45": {
+        "mmd2": 0.02419,
+        "sw2": 0.04687
+      }
+    },
+    "path_sw2": 0.08168,
+    "om_action": {
+      "sample_mean": 30.244,
+      "sample_std": 6.11,
+      "ref_mean": 105.608,
+      "ref_std": 13.995
+    },
+    "barrier_crossing_frac": 0.998,
+    "ref_crossing_frac": 1.0,
+    "transition_state": {
+      "sample_frac_near_barrier": 0.112,
+      "ref_frac_near_barrier": 0.306,
+      "sample_x1_mid_mean": 0.518,
+      "ref_x1_mid_mean": -0.004
+    },
+    "terminal": {
+      "sample_x1_mean": 1.002,
+      "sample_x2_mean": -0.072,
+      "ref_x1_mean": 0.967,
+      "ref_x2_mean": 0.015,
+      "mean_dist_to_B": 0.257
+    }
+  },
+  "sinkhorn_ipf": {
+    "n_ipf_iters": 16,
+    "n_sample": 500,
+    "n_train_steps": 400,
+    "time_s": 76.9,
+    "memory_mb": 0.1,
+    "marginal_metrics": {
+      "t=0.05": {
+        "mmd2": 0.00176,
+        "sw2": 0.0026
+      },
+      "t=0.10": {
+        "mmd2": 0.013,
+        "sw2": 0.01726
+      },
+      "t=0.15": {
+        "mmd2": 0.02475,
+        "sw2": 0.03617
+      },
+      "t=0.20": {
+        "mmd2": 0.05123,
+        "sw2": 0.086
+      },
+      "t=0.25": {
+        "mmd2": 0.07281,
+        "sw2": 0.14675
+      },
+      "t=0.30": {
+        "mmd2": 0.07109,
+        "sw2": 0.14577
+      },
+      "t=0.35": {
+        "mmd2": 0.08128,
+        "sw2": 0.16769
+      },
+      "t=0.40": {
+        "mmd2": 0.04577,
+        "sw2": 0.1414
+      },
+      "t=0.45": {
+        "mmd2": 0.0113,
+        "sw2": 0.15069
+      }
+    },
+    "path_sw2": 0.09209,
+    "om_action": {
+      "sample_mean": 118.864,
+      "sample_std": 21.553,
+      "ref_mean": 105.608,
+      "ref_std": 13.995
+    },
+    "barrier_crossing_frac": 0.99,
+    "ref_crossing_frac": 1.0,
+    "transition_state": {
+      "sample_frac_near_barrier": 0.254,
+      "ref_frac_near_barrier": 0.306,
+      "sample_x1_mid_mean": -0.4,
+      "ref_x1_mid_mean": -0.004
+    },
+    "terminal": {
+      "sample_x1_mean": 0.976,
+      "sample_x2_mean": 0.012,
+      "ref_x1_mean": 0.967,
+      "ref_x2_mean": 0.015,
+      "mean_dist_to_B": 0.336
+    }
+  }
+}

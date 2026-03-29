@@ -1,0 +1,29 @@
+{
+  "d": 2,
+  "initial_x1_mean": -0.9950042963027954,
+  "initial_x1_std": 0.09905912727117538,
+  "q1_x1_mean": 0.26164233684539795,
+  "q1_x1_std": 0.7540369629859924,
+  "midpoint_x1_mean": 0.9296748638153076,
+  "midpoint_x1_std": 0.5116718411445618,
+  "q3_x1_mean": 1.0596259832382202,
+  "q3_x1_std": 0.31097620725631714,
+  "terminal_x1_mean": 1.0754650831222534,
+  "terminal_x1_std": 0.24629941582679749,
+  "n_crossing": 597,
+  "n_total": 600,
+  "frac_crossing": 0.9950000047683716,
+  "n_params": 299714,
+  "timing_total": 33386.130360126495,
+  "config": {
+    "n_annealing": 30,
+    "n_opt": 200,
+    "n_paths": 200,
+    "width": 192,
+    "depth": 4,
+    "lr": 0.002,
+    "sigma_obs": 0.15,
+    "dt": 0.02
+  },
+  "device": "mps"
+}
