@@ -1,4 +1,4 @@
-# Additional Experiments for "Machine-Learned Sampling of Conditioned Path Measures"
+# Path Sampling Experiments
 
 ## Setup
 
@@ -17,7 +17,6 @@ python run_experiments.py --experiment all
 # Run individual experiments
 python run_experiments.py --experiment brownian_bridge_metrics  # Quantitative metrics
 python run_experiments.py --experiment ablation                 # Alg 1 ablations
-python run_experiments.py --experiment icnn_vs_mlp              # ICNN vs MLP
 python run_experiments.py --experiment scaling_ou               # OU scaling 
 python run_experiments.py --experiment scaling_dw               # DW scaling (delegates to run_dw_d12.py)
 python run_experiments.py --experiment h_sweep                  # Algorithm 3 h-sweep (dense extreme zig-zag)
@@ -51,8 +50,8 @@ python run_muller_brown.py
 - `networks.py` — DriftNetwork (Alg 1), ICNN + PushforwardMLP (Alg 3)
 - `sde_utils.py` — SDE integrators, reference processes (BM, OU, double-well)
 - `metrics.py` — MMD², sliced W₂, marginal KL, Fisher information estimator
-- `algorithm1.py` — Controlled Transport (Section 3.1, Algorithm 1)
-- `algorithm3.py` — Wasserstein/JKO with pushforward maps (Section 4.3, Algorithm 3)
+- `algorithm1.py` — Controlled Transport (Algorithm 1)
+- `algorithm3.py` — Wasserstein/JKO with pushforward maps (Algorithm 3)
 
 ### Experiment scripts
 - `run_experiments.py` — Main runner for Experiments 
