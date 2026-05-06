@@ -2,8 +2,6 @@
 """
 Algorithm 1 vs Algorithm 3 across likelihood regimes.
 
-Addresses reviewer's question about when each algorithm is preferable.
-
 Setup: OU process β=0.25, d=1, T=1.0, dt=0.02, equilibrium initialization.
 Reference: analytical Gaussian posterior via Kalman forward-backward smoother.
 Algorithm 1: 30 annealing, 200 opt steps (full budget).
@@ -15,7 +13,6 @@ Four likelihood regimes spanning dense/sparse × mild/extreme:
   - Sparse/mild:   1 obs at t=1, target=4, σ=0.3
   - Sparse/extreme: 1 obs at t=1, target=8, σ=0.3
 
-The h-sweep experiment is in run_experiments.py --experiment h_sweep.
 """
 
 import json, os, time, math, gc
