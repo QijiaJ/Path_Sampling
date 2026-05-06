@@ -1,6 +1,6 @@
 """
 Algorithm 1: Controlled Transport from Prior to Posterior.
-Implements the annealing scheme from Section 3.1 / Appendix F.
+Implements the annealing scheme from Section 3.1.
 
 The drift b_s is parameterized as b_s = b_0 + sum of incremental updates,
 where each increment is learned by a neural network phi^theta.
@@ -93,7 +93,6 @@ class ControlledTransport:
     def compute_h_s(self, paths, s):
         """
         Compute h_s(x) = -J(x;y) + E_{pi_s}[J(x;y)] for the current paths.
-        This is the RHS of the consistency equation (11).
 
         h_s(x) involves terms from the OM functional; simplified here as:
         h_s(x) = -1/2 int_0^T [(b_s - dx/dt)^T (db/ds) + 1/2 div(db/ds)] dt
