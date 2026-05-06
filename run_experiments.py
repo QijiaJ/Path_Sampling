@@ -1,5 +1,5 @@
 """
-Main experiment runner for reviewer-requested improvements.
+Main experiment runner.
 
 Experiments:
   - brownian_bridge_metrics — Quantitative metrics (MMD², SW₂, KL) on Brownian bridge
@@ -704,7 +704,7 @@ def experiment_h_sweep():
     equilibrium and alternate sign, creating the most stressful scenario
     for Algorithm 3: at large h, a single JKO step must bridge two or
     more observation times with opposite-sign targets, violating the
-    smooth-marginal-evolution assumption (Appendix A, point 3).
+    smooth-marginal-evolution assumption.
 
     Reference: analytical Gaussian posterior via Kalman smoother.
     Sweep h ∈ {T/20, T/10, T/5, T/4, T/2, T}.
